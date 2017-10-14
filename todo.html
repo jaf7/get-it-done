@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>TODO List</title>
+    <!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" rel="stylesheet">
+    <style>
+        nav {
+            height: auto;
+        }
+        nav.i {
+            line-height: unset;
+        }
+        div.container {
+            width: 80%;
+        }
+        div.container.list-wrapper {
+            margin: 90px auto 0;
+        }
+        div.row {
+            margin-bottom: auto;
+        }
+        textarea.materialize-textarea {
+            /*overflow-y: scroll;*/
+            min-height: 5rem;
+            max-height: 20rem;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li div.collapsible-header:nth-of-type(odd) {
+            background-color: #0082751c;
+        }
+        div.form-buttons {
+            /*float: right;*/
+            min-width: 100%;
+            margin-left: auto;
+        }
+        div.header-buttons {
+            float: right;
+            min-width: auto;
+            margin-left: auto;
+        }
+        button.btn-flat {
+            padding: 0;
+            height: auto;
+            min-width: 40px;
+        }
+        .collapsible-header > div.row {
+            margin-left: 0.1rem;
+        }
+        .collapsible-header i {
+            margin-right: 0;
+        }
+/*        .highlighted {
+            background-color: #0082751c;
+        }*/
+        .strike-through {
+            text-decoration: line-through;
+        }
+        .hidden {
+            display: none;
+        }
+        span.note-preview {
+            margin-left: 0.5rem;
+
+        }
+        .off-white {
+            background-color: #F6F6F6;
+            color: #000;
+        }
+        .material-icons.md-18 { font-size: 18px; }
+        .material-icons.md-24 { font-size: 24px; }
+        .material-icons.md-36 { font-size: 36px; }
+        .material-icons.md-48 { font-size: 48px; }
+    </style>
+</head>
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="off-white">
+                <div class="container">
+
+                        <!-- New Todo item input -->
+                        <form>
+                            <div class="row">
+                                <div id="note-input-column" class="col s6 offset-s1">
+                                    <div class="input-field">
+                                        <textarea id="new-item" class="materialize-textarea"></textarea> <!-- tabindex="1" -->
+                                        <label for="new-item">New Note</label>
+                                    </div>
+                                </div>
+
+                                <div id="form-buttons-column" class="col s5 m3 offset-m2 l2 offset-l3">
+                                    <div class="form-buttons">
+                                        <button type="button" id="submit-item" class="btn-flat" data-position="right" data-delay="50" data-tooltip="Add a new note"><i class="material-icons">add</i></button> <!-- tabindex="2" -->
+                                        <button type="button" id="open-archive" class="btn-flat" data-position="left" data-delay="50" data-tooltip="Open the archive"><i class="material-icons">folder_open</i></button>
+                                        <button type="button" id="close-archive" class="btn-flat hidden" data-position="left" data-delay="50" data-tooltip="Open the archive"><i class="material-icons">folder</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                </div> <!-- container -->
+        </nav>
+    </div>
+
+    <br>
+
+    <div class="container list-wrapper">
+
+        <!-- todo list -->
+        <div>
+            <ul class="collapsible hidden" id="todo-list" data-collapsible="expandable">
+            </ul>
+        </div>
+
+        <br>
+
+        <!-- archive -->
+        <div>
+            <ul class="collapsible hidden" id="archive-list" data-collapsible="expandable">
+            </ul>
+        </div>
+
+        <!-- Todo list template -->
+        <template id="todo-item-template">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">short_text</i>
+                    <!-- TODO: wrap preview text below header buttons on phone screen sizes? -->
+                    <span class="note-preview">
+                    </span>
+                    <div class="header-buttons">
+                        <button type="button" class="btn-flat unchecked-item" data-position="top" data-delay="50" data-tooltip="Mark as completed"><i class="material-icons">check_box_outline_blank</i></button>
+                        <button type="button" class="btn-flat checked-item hidden" data-position="top" data-delay="50" data-tooltip="Mark as not completed"><i class="material-icons">check_box</i></button>
+                        <button type="button" class="btn-flat archive-item" data-position="top" data-delay="50" data-tooltip="Archive this note"><i class="material-icons">archive</i></button>
+                        <button type="button" class="btn-flat restore-item hidden" data-position="top" data-delay="50" data-tooltip="Restore this note"><i class="material-icons">unarchive</i></button>
+                        <button type="button" class="btn-flat remove-item" data-position="top" data-delay="50" data-tooltip="Remove this note"><i class="material-icons">remove</i></button>
+                    </div>
+                </div>
+                <div class="collapsible-body" contenteditable="true">
+                    <span class="note-full">
+                    </span>
+                </div>
+            </li>
+        </template>
+
+    </div> <!-- container -->
+
+    <!-- Import jQuery before Materialize JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="TODO_list.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script>
+
+</body>
+</html>
