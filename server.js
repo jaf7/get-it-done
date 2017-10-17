@@ -10,7 +10,7 @@ function start( route, handle ) { // route is a verb (function), handle is a col
     route( handle, pathname, res ); // inject the response object
   }
 
-  http.createServer( onRequest ).listen( 80 ); // 8888
+  http.createServer( onRequest ).listen( 8080 ); // 8888
   console.log( 'Server started' );
 }
 
