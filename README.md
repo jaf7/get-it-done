@@ -2,7 +2,7 @@
 
 A learning project TODO list app that aspires to be a clean, intuitive user experience.
 
-This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. I realized in part 4 that by using local storage I could immediately start learning to design an app that uses persistent storage. I'm beginning to learn SQL and will implement the next version with a database. Using local storage is [insecure](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Storage_APIs) for several reasons <sup>[1](#f1)</sup> <sup>[2](#f2)</sup>..
+This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. I realized in part 4 that by using local storage I could immediately start learning to design an app that uses persistent storage. I'm beginning to learn SQL and will implement the next version with a database. Using local storage is for several reasons. <sup>[1](#f1)</sup> <sup>[2](#f2)</sup>
 
 I'm using [Node School](https://nodeschool.io/) lessons and [The Node Beginner Book](https://www.nodebeginner.org/) as a guide, and building back-end functionality without using a framework such as Express. I want to begin to understand internals before using a framework like Express (I think this will facilitate better understanding / utilization of such frameworks.) The resulting looks different in approach to several tutorials I've come across. Time / practice / study will tell me what methods are best practices.
 
@@ -24,8 +24,21 @@ I'm using [Node School](https://nodeschool.io/) lessons and [The Node Beginner B
 
 ## Demo
 #### Please Note: I've disabled tooltips I implemented since their behaviour seems disruptive, and I'm tracking down a bug I think involves event capturing / bubbling. In the meantime this is the basic usage (try adding several notes and manipulating them):
-* 
-* And thanks for checking it out!
+##### New Notes:
+* "+" adds new note
+* Folder icon opens / closes the archive
+
+##### Note Items:
+* Click on note heading to expand note
+* Click anywhere in note body to edit (change will persist)
+* Checkbox marks as "completed" (strikethrough, reversible)
+* Arrow-folder archives (for active notes) / unarchives (for archived notes)
+* "-" permanently removes note item
+
+Thanks for checking it out!
+
+[Get It Done practice app](https://todo-get-it-done.herokuapp.com/)
+
 
 ## Built Using
 
