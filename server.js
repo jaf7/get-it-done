@@ -1,6 +1,6 @@
 var http = require( 'http' );
 var url = require( 'url' );
-var port = process.env.PORT
+var port = process.env.PORT || 8080;
 
 function start( route, handle ) { // route is a verb (function), handle is a collection of request handlers (methods)
 
