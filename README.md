@@ -1,11 +1,21 @@
 # get-it-done
 
-A TODO list app (a work in progress prototype) that aspires to be a clean, intuitive user experience. This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. It is primarily a learning project. NB: In working through [Node School](https://nodeschool.io/) lessons and [The Node Beginner Book](https://www.nodebeginner.org/), I am attempting to build-to-learn without using Express.
+A learning project TODO list app that aspires to be a clean, intuitive user experience.
+
+This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. I realized in part 4 that by using local storage I could immediately start learning to design an app that uses persistent storage. I'm beginning to learn SQL and will implement the next version with a database. Using local storage is [insecure](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Storage_APIs) for several reasons <sup>[1](#f1)</sup> <sup>[2](#f2)</sup>..
+
+I'm using [Node School](https://nodeschool.io/) lessons and [The Node Beginner Book](https://www.nodebeginner.org/) as a guide, and building back-end functionality without using a framework such as Express. I want to begin to understand internals before using a framework like Express (I think this will facilitate better understanding / utilization of such frameworks.) The resulting looks different in approach to several tutorials I've come across. Time / practice / study will tell me what methods are best practices.
+
+(Many improvements to be made to UX, UI, behavior! Work in progress.)
+
+<b id="f1">1</b> [HTML5 Security](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Storage_APIs)
+
+<b id="f2">2</b> [Stack Overflow](https://stackoverflow.com/questions/17280390/can-local-storage-ever-be-considered-secure)
 
 ## Purpose
 
 * To begin to learn Node.js and understand modules, servers, routing and request handling
-* To create an app that I will use and improve in a feedback loop
+* To create an app that I will eventually use and improve in a feedback loop
 * To begin exploring usability in relation to design
 * An opportunity to work on the fundamentals (HTML/CSS, JS, readable maintainable non-brittle code)
 * To introduce myself to using Heroku and Heroku CLI with a Node.js back-end.
@@ -13,6 +23,9 @@ A TODO list app (a work in progress prototype) that aspires to be a clean, intui
 
 
 ## Demo
+#### Please Note: I've disabled tooltips I implemented since their behaviour seems disruptive, and I'm tracking down a bug I think involves event capturing / bubbling. In the meantime this is the basic usage (try adding several notes and manipulating them):
+* 
+* And thanks for checking it out!
 
 ## Built Using
 
