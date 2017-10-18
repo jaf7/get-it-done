@@ -1,5 +1,6 @@
 var http = require( 'http' );
 var url = require( 'url' );
+var port = process.env.PORT
 
 function start( route, handle ) { // route is a verb (function), handle is a collection of request handlers (methods)
 
@@ -10,7 +11,7 @@ function start( route, handle ) { // route is a verb (function), handle is a col
     route( handle, pathname, res ); // inject the response object
   }
 
-  http.createServer( onRequest ).listen( $PORT ); // 8888 80 8080
+  http.createServer( onRequest ).listen( port ); // 8888 80 8080
   console.log( 'Server started' );
 }
 
