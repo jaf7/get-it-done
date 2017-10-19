@@ -101,11 +101,16 @@
       }
     }
 
+    // FIXME: Submit event is occurring twice, on second occurrence Boolean(textArea.value) == false
     function submit( e ) {
-      console.log('submit clicked');
       let itemId = 'item-' + JSON.parse( localStorage.getItem('todo') ).itemCounter;
 
+      console.log(`Boolean(textArea.value): ${Boolean(textArea.value)}`)
+
       if ( textArea.value ) {
+
+        console.log( `textArea.value: ${textArea.value}` );
+
         let newItemHTML = buildItemHTML( itemId, textArea.value );
         todoList.appendChild( newItemHTML );
 
@@ -124,7 +129,9 @@
         addItemListeners( todoList.lastElementChild );
         updateLocalStorage( itemId, true );
       } else {
-        alert( 'Please enter a new TODO item.' ); // --- replace w/ materialize or css notification
+        // FIXME: Submit event is occurring twice, on second occurrence Boolean(textArea.value) == false
+        // console.log(`else clause, Boolean(textArea.value): ${Boolean(textArea.value)}`)
+        // alert( 'Please enter a new TODO item.' ); // --- replace w/ materialize or css notification
       }
     }
 
@@ -230,7 +237,7 @@
         listItem.parentNode.removeChild( listItem );
         toggleHighlights( archiveList );
       }
-        console.log('todoList at end of moveListItem, before call to updateLocalStorage', todoList )
+        // console.log('todoList at end of moveListItem, before call to updateLocalStorage', todoList )
       updateLocalStorage( listItemCopy.id, false );
     }
 
@@ -301,7 +308,7 @@
     // ---
 
     function updateLocalStorage( id, isNewListItem ) {
-        console.log( 'updateLocalStorage called with id', id );
+        // console.log( 'updateLocalStorage called with id', id );
       if ( isNewListItem ) {
         localStorageList[ 'itemCounter' ] += 1;
       }
@@ -330,7 +337,7 @@
         if ( itemOuterHtml ) {
           list[ id ] = itemOuterHtml;
             // essentially, it seems you can either call sort again on this object, or write the entire <ul> contents to this object
-            console.log('subList of localStorageList object, after writing to list object', list );
+            // console.log('subList of localStorageList object, after writing to list object', list );
         } else {
           delete list[ id ];
           localStorageList[ 'itemCounter' ] -= 1;
@@ -474,7 +481,7 @@
             let nextItem = list.children[i+1];
             let nextIdNumber = nextItem ? nextItem.id.match( /\d+/ )[0] : null;
             if ( nextIdNumber && idNumber > nextIdNumber ) {
-              console.log('idNumber:', idNumber, 'nextIdNumber:', nextIdNumber);
+              // console.log('idNumber:', idNumber, 'nextIdNumber:', nextIdNumber);
               list.insertBefore( nextItem, item );
               switched = true;
             }
