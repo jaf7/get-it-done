@@ -6,8 +6,6 @@ This began as a solution to Rithm School's [Intermediate Javascript](https://www
 
 I'm using [Node School](https://nodeschool.io/) lessons and [The Node Beginner Book](https://www.nodebeginner.org/) as a guide, and building back-end functionality without using a framework such as Express. I want to begin to understand internals before using a framework like Express (I think this will facilitate better understanding / utilization of such frameworks). The resulting code looks different in approach to several tutorials I've come across. Time / practice / study will refine my understanding of methods / best practices.
 
-(Many improvements to be made to UX, UI, behavior! Work in progress.)
-
 <b id="f1">1</b> [HTML5 Security and Storage APIs](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Storage_APIs)
 
 <b id="f2">2</b> [Stack Overflow, Local Storage and Security](https://stackoverflow.com/questions/17280390/can-local-storage-ever-be-considered-secure)
@@ -78,6 +76,7 @@ Thanks for checking it out!
 
 #### TODO
 
+  - [ ] Submit event is occurring twice, on second occurrence Boolean(textArea.value) == false
   - [ ] Make `todo.js` conform to airbnb style guide: https://github.com/airbnb/javascript
   - [ ] Refactor buildFromScratch helper function and test for IE
   - [ ] Re-implement alerts with a CSS solution
