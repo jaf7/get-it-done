@@ -2,7 +2,7 @@
 
 A learning project TODO list app that aspires to be a clean, intuitive user experience.
 
-This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. I realized in part 4 that by using local storage I could immediately start learning to design an app that uses persistent storage. I'm beginning to learn SQL and will implement the next version with a database. Using local storage is for several reasons. <sup>[1](#f1)</sup> <sup>[2](#f2)</sup>
+This began as a solution to Rithm School's [Intermediate Javascript](https://www.rithmschool.com/courses/intermediate-javascript) Events Exercises, Parts 3 and 4. I realized in part 4 that by using local storage I could immediately start learning to design an app that uses persistent storage. I'm beginning to learn SQL and will implement the next version with a database. Using local storage is insecure for several reasons. <sup>[1](#f1)</sup> <sup>[2](#f2)</sup>
 
 I'm using [Node School](https://nodeschool.io/) lessons and [The Node Beginner Book](https://www.nodebeginner.org/) as a guide, and building back-end functionality without using a framework such as Express. I want to begin to understand internals before using a framework like Express (I think this will facilitate better understanding / utilization of such frameworks.) The resulting looks different in approach to several tutorials I've come across. Time / practice / study will tell me what methods are best practices.
 
@@ -83,8 +83,9 @@ Thanks for checking it out!
   * Revert expanded / collapsed list item states to all collapsed on `moveListItem()` or page (re)load []
   - [ ] For highlighting every other item: continue testing CSS pseudo-class `nth-of-type(an+b)` (remove `toggleHighlights()` helper function?) [/]
   - [ ] Debug recursive merge sort, continue studying sort algorithms, implement performant solution [/]
+  - [ ] Move jQuery, Materialize, jquery.scrollTo to npm packaging (instead of CDNs)
   - [ ] Explore refactoring:
-    * Object Oriented
+    * Object Oriented design
     * Most appropriate data structure for `listData` and `archiveListData`
         * Objects or nested arrays?
         * For branching TODO list with sublists? 
