@@ -7,7 +7,10 @@ var handle = {};
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/main.css"] = requestHandlers.css;
+// handle["/node_modules/materialize-css/dist/css/materialize.min.css"] = requestHandlers.materializeMinCss;
 handle["/todo.js"] = requestHandlers.js;
+// handle["/node_modules/jquery/dist/jquery.min.js"] = requestHandlers.jqueryMin;
+// handle["/node_modules/materialize-css/dist/js/materialize.min.js"] = requestHandlers.materializeMinJs;
 handle["/upload"] = requestHandlers.upload;
 
 server.start( router.route, handle );

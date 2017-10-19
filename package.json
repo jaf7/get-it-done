@@ -22,7 +22,12 @@
   "homepage": "https://github.com/jaf7/get-it-done#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "hammerjs": "^2.0.8",
     "http": "0.0.0",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.2",
+    "punycode": "^2.1.0",
+    "querystring": "^0.2.0",
     "url": "^0.11.0"
   }
 }

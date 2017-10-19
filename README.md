@@ -66,24 +66,27 @@ Thanks for checking it out!
 * [IIFE discussion - YDKJS: Up and Going, Chapter 2](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md) - Buy the books, suppor the author!
 * [IIFE discussion - YDKJS: Scope and Closures, Chapter 3](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md) - Buy the fantastic books, suppor the author!
 * [Material Design](https://material.io/)
+* [HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) - Wikipedia
 
 
 #### TODO
 
-  - [ ] Make `todo.js` conform to airbnb style guide: https://github.com/airbnb/javascript [/]
-  - [ ] Refactor buildFromScratch helper function and test for IE []
-  * Re-implement alerts with CSS solution []
-  - [ ] Fix "Enter new item" alert []
-  - [ ] Decide if refreshItemListeners helper function be replaced with event delegation [David Walsh, Event Delegation](https://davidwalsh.name/event-delegate) []
-  - [ ] Add scrollTo `<li>` after restoring list items from archive []
-  - [ ] Add animation for archive, restore, remove (Visually confusing w/ no visible transition. See materialize hiding and transition helpers) []
-  - [ ] Back to top on pageload, & add back to top button for scrolled content []
-  - [ ] Use `classList.toggle()` method for `display: hidden` instead of `.add` and `.remove` []
-  - [ ] Limit header preview text to one line []
-  * Revert expanded / collapsed list item states to all collapsed on `moveListItem()` or page (re)load []
-  - [ ] For highlighting every other item: continue testing CSS pseudo-class `nth-of-type(an+b)` (remove `toggleHighlights()` helper function?) [/]
-  - [ ] Debug recursive merge sort, continue studying sort algorithms, implement performant solution [/]
-  - [ ] Move jQuery, Materialize, jquery.scrollTo to npm packaging (instead of CDNs)
+  - [ ] Make `todo.js` conform to airbnb style guide: https://github.com/airbnb/javascript
+  - [ ] Refactor buildFromScratch helper function and test for IE
+  * Re-implement alerts with CSS solution
+  - [ ] Fix "Enter new item" alert
+  - [ ] Decide if refreshItemListeners helper function be replaced with event delegation [David Walsh, Event Delegation](https://davidwalsh.name/event-delegate)
+  - [ ] Add scrollTo `<li>` after restoring list items from archive
+  - [ ] Add animation for archive, restore, remove (Visually confusing w/ no visible transition. See materialize hiding and transition helpers)
+  - [ ] Back to top on pageload, & add back to top button for scrolled content
+  - [ ] Use `classList.toggle()` method for `display: hidden` instead of `.add` and `.remove`
+  - [ ] Limit header preview text to one line
+  * Revert expanded / collapsed list item states to all collapsed on `moveListItem()` or page (re)load
+  - [ ] For highlighting every other item: continue testing CSS pseudo-class `nth-of-type(an+b)` (remove `toggleHighlights()` helper function?)
+  - [ ] Debug recursive merge sort, continue studying sort algorithms, implement performant solution
+  - [ ] Move jQuery, Materialize, jquery.scrollTo to npm packaging (instead of CDNs) (Is there a best practice / canonical method?)
+  - [ ] Learn correct way to load requested resources for front-end style / behavior. ~~My current method, building a request handler for each path and adding a method to the module.exports object, as demonstrated in Node Beginner Book, seems to have multiple failure points & is maybe confusing to follow (?)~~
+  - [ ] Consider learning / using [NW.js](https://github.com/nwjs/nw.js) (formerly node-webkit)
   - [ ] Explore refactoring:
     * Object Oriented design
     * Most appropriate data structure for `listData` and `archiveListData`

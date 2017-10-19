@@ -371,7 +371,7 @@
         let headerDiv = document.createElement( 'div' );
         let textIcon = document.createElement( 'i' );
         let headerSpan = document.createElement( 'span' );
-        let headerText = resizeHeaderText( text );
+        let headerText = resizeHeaderText( text ); 
         let uncheckedButton = stringToDom( '<button class="btn-flat tooltipped unchecked-item" data-position="top" data-delay="50" data-tooltip="Mark as completed"><i class="material-icons">check_box_outline_blank</i></button>' );
         let archiveButton = stringToDom( '<button class="btn-flat tooltipped archive-item" data-position="top" data-delay="50" data-tooltip="Archive this note"><i class="material-icons">archive</i></button>' );
         let removeButton = stringToDom( '<button class="btn-flat tooltipped remove-item" data-position="top" data-delay="50" data-tooltip="Remove this note"><i class="material-icons">remove</i></button>' );
@@ -463,7 +463,6 @@
     // Worst case O(n^2) time complexity, but list will always be nearly sorted
     // There is no sort method on NodeLists & HTMLCollections as with Array.prototype.sort() (correct?)
     function sortList( list ) {
-        debugger
       let switched = true;
       while( switched ) {
         switched = false;
@@ -488,7 +487,6 @@
       const middle = Math.floor( arr.length / 2 );
       const left = arr.slice( 0, middle );
       const right = arr.slice( middle );
-        debugger
 
       if ( arr.length === 1 ) {
         return arr;
@@ -499,7 +497,6 @@
         let merged = [];
         let leftIndex = 0;
         let rightIndex = 0;
-          debugger
         while ( leftIndex >= left.length && rightIndex >= right.length ) {
           if ( left[ leftIndex ] < right[ rightIndex ] ) {
             merged.push( left[ leftIndex ] );

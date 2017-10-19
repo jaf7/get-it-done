@@ -54,6 +54,51 @@ function css( res ) {
 
 }
 
+// function materializeMinCss( res ) {
+//   fs.readFile( './main.css', function( err, materializeMinCssFile ) {
+//     if ( err ) {
+//       console.error( `Error: ${err}` );
+//       res.writeHead( 520, {"Content-Type": "text/plain"} );
+//       res.write( err );
+//       res.end();
+//     } else {
+//       res.writeHead( 200, {"Content-Type": "text/css"} );
+//       res.write( materializeMinCssFile );
+//       res.end();
+//     }
+//   });
+// }
+
+// function jqueryMin( res ) {
+//   fs.readFile( './node_modules/jquery/dist/jquery.min.js', function( err, jqueryMinFile ) {
+//     if ( err ) {
+//       console.error( `Error: ${err}` );
+//       res.writeHead( 520, {"Content-Type": "text/plain"} );
+//       res.write( err );
+//       res.end();
+//     } else {
+//       res.writeHead( 200, {"Content-Type": "text/css"} );
+//       res.write( jqueryMinFile );
+//       res.end();
+//     }
+//   });
+// }
+
+// function materializeMinJs( res ) {
+//   fs.readFile( './node_modules/materialize-css/dist/js/materialize.min.js', function( err, materializeMinJsFile ) {
+//     if ( err ) {
+//       console.error( `Error: ${err}` );
+//       res.writeHead( 520, {"Content-Type": "text/plain"} );
+//       res.write( err );
+//       res.end();
+//     } else {
+//       res.writeHead( 200, {"Content-Type": "text/css"} );
+//       res.write( materializeMinJsFile );
+//       res.end();
+//     }
+//   });
+// }
+
 function upload( res ) {
   console.log( 'Request handler for "upload" was called (example request handler)' );
 
@@ -63,8 +108,11 @@ function upload( res ) {
 }
 
 module.exports.start = start;
-module.exports.css = css;
 module.exports.js = js;
+module.exports.css = css;
+// module.exports.materializeMinCss = materializeMinCss;
+// module.exports.jqueryMin = jqueryMin;
+// module.exports.materializeMinJs = materializeMinJs;
 module.exports.upload = upload;
 
 
